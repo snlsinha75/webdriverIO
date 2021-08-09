@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+        "target": "es6",
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "declaration": false,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "skipLibCheck": true,
+        "outDir": "typeScript",
+        "resolveJsonModule": true,
+      "types": [
+        "node",
+        "webdriverio/async",
+        "@wdio/cucumber-framework",
+        "expect-webdriverio",
+      ]
+    },
+    "exclude": [
+      "node_modules",
+      "typescript"
+  ]
+}
