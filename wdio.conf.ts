@@ -73,7 +73,7 @@ export const config: WebdriverIO.Config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://agilityqa.agilitypr.com/',
+    baseUrl: 'https://webdriver.io/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -253,11 +253,6 @@ export const config: WebdriverIO.Config = {
      */
     afterScenario: async function (world, result) {
         await browser.pause(1000*5)
-        await browser.url(config.baseUrl + "Login/Signout");
-        console.log(await browser.getUrl());
-        console.log("Logging out from application")
-        await browser.waitUntil(async () => (await $('//button[@type="submit"]').getText()) === 'SIGN IN',
-        {timeout: 15000,timeoutMsg: 'Logging out from the application'})
         await browser.closeWindow;
     },
     /**

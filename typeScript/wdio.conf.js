@@ -80,7 +80,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://agilityqa.agilitypr.com/',
+    baseUrl: 'https://webdriver.io/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -259,10 +259,6 @@ exports.config = {
     afterScenario: function (world, result) {
         return __awaiter(this, void 0, void 0, function* () {
             yield browser.pause(1000 * 5);
-            yield browser.url(exports.config.baseUrl + "Login/Signout");
-            console.log(yield browser.getUrl());
-            console.log("Logging out from application");
-            yield browser.waitUntil(() => __awaiter(this, void 0, void 0, function* () { return (yield $('//button[@type="submit"]').getText()) === 'SIGN IN'; }), { timeout: 15000, timeoutMsg: 'Logging out from the application' });
             yield browser.closeWindow;
         });
     },
