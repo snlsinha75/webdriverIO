@@ -3,9 +3,12 @@ WebdriverIO Examples
 Welcome to the WebdriverIO example repository. Here you can find a lot of stuff that helps you to understand how WebdriverIO works. It is separated into different topics. The best way to start is to clone the WebdriverIO repository, install its dependencies, and build it:
 
 git clone git@github.com:snlsinha75/webdriverIO.git
-cd ./webdriverIO
-npm install
-npm test
+
+  cd ./webdriverIO
+  
+  npm install
+  
+  npm test
 
 It will open the webdriverIO official websilte and will verify the page title.
 
